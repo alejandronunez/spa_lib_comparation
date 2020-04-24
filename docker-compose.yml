@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+  vuejs:
+    image: demo-vuejsvsreact-react
+    build:
+      context: ./
+      dockerfile: ./docker/vuejs/Dockerfile
+    command: ["tail", "-f", "/dev/null"]
+    working_dir: /usr/src/app
+    volumes:
+      - ./vuejsapp:/usr/src/app
+    container_name: demo-vuejs
+    ports:
+      - '3300:3000'
+
+  react:
+    image: demo-vuejsvsreact-react
+    build:
+      context: ./
+      dockerfile: ./docker/react/Dockerfile
+    command: ["tail", "-f", "/dev/null"]
+    working_dir: /usr/src/app
+    volumes:
+      - ./reactapp:/usr/src/app
+    container_name: demo-react
+    ports:
+      - '3301:3000'
