@@ -64,6 +64,9 @@ function App() {
               <p>A paragraph for the main content.</p>
               <p>And another one.</p>
             </SlotSampleMain>
+            <SlotSampleFooter>
+              <p>Overwrite value: { generated }.{ generated }</p>
+            </SlotSampleFooter>
           </React.Fragment>
         )}
       </SlotSample>
