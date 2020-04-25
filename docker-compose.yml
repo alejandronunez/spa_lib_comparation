@@ -2,7 +2,7 @@ version: '2'
 
 services:
   vuejs:
-    image: demo-vuejsvsreact-react
+    image: demo-vuejsvsreact-vuejs
     build:
       context: ./
       dockerfile: ./docker/vuejs/Dockerfile
@@ -12,7 +12,7 @@ services:
       - ./vuejsapp:/usr/src/app
     container_name: demo-vuejs
     ports:
-      - '3300:3000'
+      - '3300:8080'
 
   react:
     image: demo-vuejsvsreact-react
