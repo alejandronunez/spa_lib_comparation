@@ -102,4 +102,18 @@ export default {
 button{
   margin-bottom: 20px;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .main_app img {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>

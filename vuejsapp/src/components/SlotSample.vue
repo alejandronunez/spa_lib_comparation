@@ -1,21 +1,19 @@
 <template>
   <div>
-    <div class="container">
-      <header>
-        <slot name="header"></slot>
-      </header>
-      <main>
-        <slot></slot>
-      </main>
-      <footer>
-        <slot
-          name="footer"
-          v-bind:generated="generated"
-        >
-          {{ generate_text }}
-        </slot>
-      </footer>
-    </div>
+    <header>
+      <slot name="header"></slot>
+    </header>
+    <main>
+      <slot></slot>
+    </main>
+    <footer>
+      <slot
+        name="footer"
+        v-bind:generated="generated"
+      >
+        {{ generate_text }}
+      </slot>
+    </footer>
   </div>
 </template>
 
